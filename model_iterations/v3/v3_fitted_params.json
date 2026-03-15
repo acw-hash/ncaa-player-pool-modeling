@@ -1,0 +1,66 @@
+{
+  "model_version": "V3",
+  "fitting_method": "Ridge regression (alpha=10.0)",
+  "cv_method": "Leave-One-Year-Out, 4 folds",
+  "cv_configs_tested": 144,
+  "training_observations": 177,
+  "training_years": [
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "enhanced_model": {
+    "ALPHA": 0.257,
+    "BETA_PPG": 1.007,
+    "BETA_SEED": -0.943,
+    "BETA_PACE": 0.355,
+    "BETA_USAGE": 1.236,
+    "BETA_ADJO": -0.117
+  },
+  "base_model": {
+    "V1_ALPHA": -6.715,
+    "V1_BETA_PPG": 1.466,
+    "V1_BETA_SEED": -0.888,
+    "V1_SIGMA": 4.02
+  },
+  "normalization": {
+    "PACE_MEAN": 68.67,
+    "PACE_STD": 2.6,
+    "USAGE_MEAN": 22.79,
+    "USAGE_STD": 4.23,
+    "ADJO_MEAN": 115.84,
+    "ADJO_STD": 4.45,
+    "ADJEM_MEAN": 21.0,
+    "ADJEM_STD": 6.02,
+    "MEAN_PPG": 14.8
+  },
+  "hyperparameters": {
+    "SHRINKAGE": 0.4,
+    "MOMENTUM": 0.0,
+    "GAMMA_EM": 0.08,
+    "RIDGE_ALPHA": 10.0
+  },
+  "variance": {
+    "SIGMA_GLOBAL": 3.98,
+    "SIGMA_SEEDS_1_2": 3.74,
+    "SIGMA_SEEDS_3_5": 3.82,
+    "SIGMA_SEEDS_6_8": 2.85,
+    "SIGMA_SEEDS_9P": 5.93
+  },
+  "cv_performance": {
+    "cv_mae": 17.2922,
+    "cv_r": 0.4082,
+    "best_config": {
+      "ridge": 50.0,
+      "shrinkage": 0.1,
+      "momentum": 0.0,
+      "features": "minimal"
+    }
+  },
+  "in_sample_fit": {
+    "R2": 0.4914,
+    "R2_adjusted": 0.4734,
+    "RMSE": 3.9773
+  }
+}

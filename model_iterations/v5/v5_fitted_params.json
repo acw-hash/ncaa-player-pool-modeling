@@ -1,0 +1,80 @@
+{
+  "model_version": "V5",
+  "fitting_method": "Ridge regression (alpha=50)",
+  "cv_method": "Bootstrap-Augmented LOYO-CV with 1-SE Rule",
+  "training_observations": 177,
+  "training_years": [
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "selected_features": "minimal",
+  "primary_model": {
+    "ALPHA": -1.813,
+    "BETA_PPG": 1.144,
+    "BETA_SEED": -0.844
+  },
+  "base_model": {
+    "V1_ALPHA": -1.813,
+    "V1_BETA_PPG": 1.144,
+    "V1_BETA_SEED": -0.844,
+    "V1_SIGMA": 4.06
+  },
+  "enhanced_tiebreaker": {
+    "ALPHA": 2.328,
+    "BETA_PPG": 0.864,
+    "BETA_SEED": -0.867,
+    "BETA_PACE": 0.199,
+    "BETA_USAGE": 0.961,
+    "BETA_ADJO": 0.009
+  },
+  "normalization": {
+    "PACE_MEAN": 68.67,
+    "PACE_STD": 2.6,
+    "USAGE_MEAN": 22.79,
+    "USAGE_STD": 4.23,
+    "ADJO_MEAN": 115.84,
+    "ADJO_STD": 4.45,
+    "ADJEM_MEAN": 21.0,
+    "ADJEM_STD": 6.02,
+    "MEAN_PPG": 14.8
+  },
+  "shrinkage": {
+    "type": "per_seed_bucket",
+    "SHRINKAGE_TOP": 0.15,
+    "SHRINKAGE_MID": 0.6,
+    "SHRINKAGE_LOW": 0.2,
+    "SHRINKAGE_CINDERELLA": 0.6
+  },
+  "advancement": {
+    "method": "Multi-feature logistic adjustment (BARTHAG + 3PR)",
+    "GAMMA_BARTHAG": 0.08,
+    "GAMMA_3PR": 0.05,
+    "GAMMA_ADJEM": 0.0,
+    "BARTHAG_MEAN": 0.9226,
+    "BARTHAG_STD": 0.0717,
+    "THREE_RATE_MEAN": 38.41,
+    "THREE_RATE_STD": 5.2,
+    "note": "BARTHAG subsumes AdjEM (r=0.95). 3PR is the only feature with reliable bootstrap CI for advancement."
+  },
+  "variance": {
+    "SIGMA_GLOBAL": 4.06,
+    "SIGMA_SEEDS_1_2": 3.81,
+    "SIGMA_SEEDS_3_5": 3.82,
+    "SIGMA_SEEDS_6_8": 2.99,
+    "SIGMA_SEEDS_9P": 6.52
+  },
+  "cv_performance": {
+    "cv_mae": 16.97,
+    "cv_mae_v4": 17.06,
+    "improvement": "0.53%",
+    "top8_overlap": 4.5,
+    "top8_actual_pts": 503
+  },
+  "in_sample_fit": {
+    "R2": 0.4595,
+    "R2_adjusted": 0.4501,
+    "RMSE": 4.0645
+  }
+}
